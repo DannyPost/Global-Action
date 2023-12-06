@@ -2,27 +2,39 @@
 <html lang="en">
 
 	<head>
-	
+		<!--Bogdan Postolachi-->
+		
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<meta name="description" content="page-2 Get Tickets">
+		<meta name="keywords" content="Sustainability, tickets, information, climate action, corporate accountability">
+		<meta name="author" content="Bogdan Postolachi">
+		
 		<title>Global Action</title>
+		
+		<link rel="stylesheet" href="styles.css">
+		<link rel="preconnect" href="https://fonts.googleapis.com">
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+		<link href="https://fonts.googleapis.com/css2?family=Lora:wght@700&family=Source+Sans+3:wght@500&display=swap" rel="stylesheet">	
+		
+		<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+	
 		
 		<!--<link rel="stylesheet" href="style.css">-->
 		
-		<script type= "text/javascript"></script> <!--link to external.js in scripts folder-->
-		
-		<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
 		
 	</head>
 	<body>
 	<div class = "container-fluid"> 
 	
-		<div class="text-bg-dark p-3"><!-- I used bootstrap to style my Navagational bar for my page links to stand out -->
+		<div class="text-bg-dark p-3"><!-- used bootstrap to style my Navagational bar for my page links to stand out -->
 		
 				<ul class="nav justify-content-center"> 
 					<li class="nav-item">
 						<a class="nav-link active" href="#">Home</a>
 					</li>
 					<li class="nav-item">
-						<a class="nav-link active" href="#">Get Tickets</a>
+						<a class="nav-link active" href="page2.html">Get Tickets</a>
 					</li>
 					<li class="nav-item">
 						<a class="nav-link active" href="page3.html">Event Detials</a>
@@ -31,129 +43,398 @@
 						<a class="nav-link active" href="#">Our Team</a>
 					</li>
 					<li class="nav-item">
-						<a class="nav-link active" href="#">Guessing Game</a>
+						<a class="nav-link active" href="page5.html">Guessing Game</a>
 					</li>
 					  
 				</ul>
 			
 		</div>	
 		
-		<h1>Get Tickets</h1>
+		<div class= "main">
 		
+			<div class= "row 1 text-centre">
+		
+				<div class="col-sm-12">
+					<h1>Get Tickets</h1>
+			
+				</div>
+			</div>
 		<br><br><br>
-		<h2>Attendee Tickets</h2>
-		<form> 
-			<label>First Name</label>
-			<input type = "text"><br>
-			
-			<br>
-			
-			<label>Second Name</label>
-			<input type = "text"><br>
-			
-			<br>
-			
-
-			<label>Number of tickets needed</label>
-			<label>1</label>
-			<input name = "number" type = "radio" value = "1"/>
-			
-			<label>2</label>
-			<input name = "number" type = "radio" value = "2"/>
-			
-			<label>3</label>
-			<input name = "number" type = "radio" value = "3"/>
-			
-			<label>4</label>
-			<input name = "number" type = "radio" value = "4"/>
-			
-			<label>5</label>
-			<input name = "number" type = "radio" value = "5"/>
-			
-			<br><br>
-			
-			<label>Email adress</label>
-			<input type = "text"><br>
-			
-			<br>
-			
-			<label>Phone Number</label>
-			<input type = "text"><br>
-			
-			<br>
-			
-			<label>Create a Password</label>
-			<input type = "password"><br>
-			
-			<br><br>
-			<input type="submit" value="Submit"/>
-			<input type="reset" value="Reset"/>
-			
-		</form>
 		
+		<div class= "col-sm-4">
+			<h2>Attendee Tickets (Free Entry)</h2>
+			<form name = "attendeeForm" onsubmit = "return formValidation()"> <!--onsubmit attribute set for js function formValidation() it will be executed when form is submitted-->
+			
+				<label for = "fname">First Name</label> <!-- for ="fname" is assosiating the label with the id "fname"-->
+				<input type = "text" id = "fname" name = "fname"><br> <!-- id attribute used to identify element "fname"--> <!--name attribute used to define input field for submission-->
+				<span id = "fnameError" class = "error"></span> <!-- the span is associated with displaying the error message--> <!--class used to assign a class name to the elemnt-->
+				
+				<br>
+				
+				<label for = "sname">Second Name</label>
+				<input type = "text" id = "sname" name = "sname"><br>
+				<span id = "snameError" class = "error"></span>
+				
+				<br>
+				
+
+				<!--<label>Number of tickets needed</label>-->
+				
+				<!--<br>-->
+				
+				<!--code from https://www.freecodecamp.org/news/html-drop-down-menu-how-to-add-a-drop-down-list-with-the-select-element/ used for dropdown-->
+				<label for= "numbertickets">Select Number of tickets</label> 
+				<select name = "numbertickets" id = "numbertickets">
+				
+					<option value =  "1">1 ticket</option>
+					<option value = "2">2 tickets</option>
+					<option value = "3">3 tickets</option>
+					<option value = "4">4 tickets</option>
+					<option value = "5">5 tickets</option>
+				
+				</select>
+				
+				<!--<label>1
+				<input name = "numbertickets" type = "radio" value = "1"/>
+				</label><br>
+				
+				<label>2
+				<input name = "numbertickets" type = "radio" value = "2"/>
+				</label><br>
+				
+				<label>3
+				<input name = "numbertickets" type = "radio" value = "3"/>
+				</label><br>
+				
+				<label>4
+				<input name = "numbertickets" type = "radio" value = "4"/>
+				</label><br>
+				
+				<label>5
+				<input name = "numbertickets" type = "radio" value = "5"/>
+				</label><br>-->
+				
+				<br><br>
+				
+				<label for = "emailadress">Email adress</label>
+				<input type = "text" id = "emailadress" name = "emailadress"><br>
+				<span id = "emailadressError" class = "error"></span>
+				
+				<br>
+				
+				<label for = "number">Phone Number</label>
+				<input type = "text" id = "number"  name = "number"><br>
+				<span id = "numberError" class = "error"></span>
+				
+				<br>
+				
+				<label for = "password">Create a Password</label>
+				<input type = "password" id = "password" name = "password"><br>
+				<span id = "passwordError" class = "error"></span>
+				
+				<br><br>
+				<input type="submit" value="Submit"/>
+				<input type="reset" value="Reset"/>
+				
+			</form>
+			
+		</div>
 		<br><br>
 		
-		<h2>Business Attendee Tickets</h2>
-		
-		<form>
-		
-			<label>First Name</label>
-			<input type = "text"><br>
+		<div class = "col-sm-8">
+			<h2>Business Attendee Tickets (€50 per person)</h2>
 			
-			<br>
+			<form name = "businessForm" onsubmit = "return formValidationTwo()">
 			
-			<label>Second Name</label>
-			<input type = "text"><br>
-			
-			<br>
+				<label for = "bfname">First Name</label>
+				<input type = "text" id = "bfname" name = "bfname"><br>
+				<span id = "bfnameError" class = "error"></span>
+				
+				<br>
+				
+				<label for = "bsname">Second Name</label>
+				<input type = "text" id = "bsname" name = "bsname"><br>
+				<span id = "bsnameError" class = "error"></span>
+				
+				<br>
 
-			<label>Company Name</label>
-			<input type = "text"><br>
-			
-			<br>
-			
-			<label>Your Role in the Company</label>
-			<input type = "text"><br>
-			
-			<br>
-			
-			<label>Number of tickets needed</label>
-			<label>1-5</label>
-			<input name = "number" type = "radio" value = "1"/>
-			
-			<label>6-10</label>
-			<input name = "number" type = "radio" value = "2"/>
-			
-			<label>10-15</label>
-			<input name = "number" type = "radio" value = "3"/>
-			
-			<label>16-20</label>
-			<input name = "number" type = "radio" value = "4"/>
-			
-			<label>20+</label>
-			<input name = "number" type = "radio" value = "5"/>
-			
-			<br><br>
-			
-			<label>Email adress</label>
-			<input type = "text"><br>
-			
-			<br>
-			
-			<label>Phone Number</label>
-			<input type = "text"><br>
-			
-			<br>
-			
-			<label>Create a Password</label>
-			<input type = "password"><br>
-			
-			<br><br>
-			<input type="submit" value="Submit"/>
-			<input type="reset" value="Reset"/>
-			
-		</form>
+				<label for = "cname">Company Name</label>
+				<input type = "text" id = "cname" name = "cname"><br>
+				<span id = "cnameError" class = "error"></span>
+				
+				<br>
+				
+				<label for = "role">Your Role in the Company</label>
+				<input type = "text" id = "role" name = "role"><br>
+				<span id = "roleError" class = "error"></span>
+				
+				<br>
+				
+				<!--<label>Number of tickets needed</label>-->
+				
+				<br>
+				
+				<label for= "numbertickets">Select Number of tickets</label> 
+				<select name = "numbertickets" id = "numbertickets">
+				
+					<option value =  "1-5">1-5 ticket(s)</option>
+					<option value = "6-10">6-10 tickets</option>
+					<option value = "11-15">11-15 tickets</option>
+					<option value = "16-20">16-20 tickets</option>
+					<option value = "20+">20+ tickets</option>
+					
+				</select>
+				
+				<!--<label>1-5
+				<input name = "bnumbertickets" type = "radio" value = "1-5"/><br>
+				</label>
+				
+				<label>6-10
+				<input name = "bnumbertickets" type = "radio" value = "6-10"/>
+				</label><br>
+				
+				<label>11-15
+				<input name = "bnumbertickets" type = "radio" value = "11-15"/>
+				</label><br>
+				
+				<label>16-20
+				<input name = "bnumbertickets" type = "radio" value = "16-20"/>
+				</label><br>
+				
+				<label>20+
+				<input name = "bnumbertickets" type = "radio" value = "20+"/>
+				</label><br>-->
+				
+				<br><br>
+				
+				<label for = "bemailadress">Email adress</label>
+				<input type = "text" id = "bemailadress" name = "emailadress"><br>
+				<span id = "bemailadressError" class = "error"></span>
+				
+				<br>
+				
+				<label for = "bnumber">Phone Number</label>
+				<input type = "text" id = "bnumber" name = "bnumber"><br>
+				<span id = "bnumberError" class = "error"></span>
+				
+				<br>
+				
+				<label for = "bpassword">Create a Password</label>
+				<input type = "password" id = "bpassword" name = "bpassword"><br>
+				<span id = "bpasswordError" class = "error"></span>
+				
+				
+				
+				<br><br>
+				<input type="submit" value="Submit"/>
+				<input type="reset" value="Reset"/>
+				
+			</form> 
+		</div>
 	</div>
+	
+	</div>
+		
+		<script type = "text/javascript">
+		
+			function formValidation() {				//w3schools used for function formValidation
+			
+				//Get the inputs for the form
+				
+				//for first name
+				var fname = document.forms["attendeeForm"]["fname"].value; //document.forms used to access collection of HTML forms named attendeeForms  
+				//"fname" accesses "fname" from the form
+				
+				//for second name 
+				var sname = document.forms["attendeeForm"]["sname"].value; // forms property used like an array 
+				
+				//for number of tickets
+				//var numbertickets = getSelectedRadioValue("number"); //the function retrives the value from the group "number"
+				
+				//for email adress
+				var emailadress = document.forms["attendeeForm"]["emailadress"].value; //.value takes the value from input field 
+				
+				//for phone number
+				var number = document.forms["attendeeForm"]["number"].value; 
+			
+				//for password
+				var password = document.forms["attendeeForm"]["password"].value; 
+				
+				
+				// Error messages (in case user submits without writting anything)
+				
+				//for first name error 
+				document.getElementById("fnameError").innerHTML = ""; //document.getElementById will for the HTML element with the id "fnameError"
+				
+				//for second name error
+				document.getElementById("snameError").innerHTML = ""; //innerHTML = "" used 
+
+				//for email adress error 
+				document.getElementById("emailadressError").innerHTML = "";
+
+				//for phone number error
+				document.getElementById("numberError").innerHTML = "";
+
+				//for password error 
+				document.getElementById("passwordError").innerHTML = "";
+
+
+
+
+					if (fname == "") {
+						document.getElementById("fnameError").innerHTML = "First Name is requierd to get your Ticket";
+						return false;
+					}
+					
+
+					if (sname == "") {
+						document.getElementById("snameError").innerHTML = "Second Name is requierd to get your Ticket";
+						return false;
+					}
+					
+					if (emailadress == ""){
+							document.getElementById("emailadressError").innerHTML = "Email Adress is requierd to get your Ticket";
+							return false;
+					}
+					
+					if (number == ""){
+						document.getElementById("numberError").innerHTML = "Phone Number is requierd to get your Ticket";
+						return false;
+					}
+					
+					if (password == ""){
+						document.getElementById("passwordError").innerHTML = "Password is requierd to get your Ticket";
+						return false;
+					}
+					
+					//When the form is valid 
+					alert("You will recive your ticket(s) shortly");
+					return true;
+			
+		}	
+		
+		/*function getSelectedRadioValue(numbertickets){
+
+			var radios = document.getElementsByName(numbertickets);
+			
+			for (var i = 0; i <radios.length; i++){
+			
+				if (radios[i].checked){
+				
+				 return radios[i].value;
+				}
+			}
+			
+			return"";
+			
+		} */
+		
+		
+		
+		function formValidationTwo(){
+			//Get the inputs for the form
+			var bfname = document.forms["businessForm"]["bfname"].value;
+				
+			var bsname = document.forms["businessForm"]["bsname"].value;
+			
+			var cname = document.forms["businessForm"]["cname"].value;
+			
+			var role = document.forms["businessForm"]["role"].value;
+				
+			//var bnumbertickets = getSelectedRadioValueTwo("bnumbertickets");
+				
+			var bemailadress = document.forms["businessForm"]["bemailadress"].value;
+				
+			var bnumber = document.forms["businessForm"]["bnumber"].value;
+				
+			var bpassword = document.forms["businessForm"]["bpassword"].value;
+				
+				
+			// Error messages 
+			document.getElementById("bfnameError").innerHTML = "";
+				
+			document.getElementById("bsnameError").innerHTML = "";
+			
+			document.getElementById("cnameError").innerHTML = "";
+			
+			document.getElementById("roleError").innerHTML = "";
+
+			document.getElementById("bemailadressError").innerHTML = "";
+
+			document.getElementById("bnumberError").innerHTML = "";
+
+			document.getElementById("bpasswordError").innerHTML = "";
+
+
+
+
+			if (bfname == "") {
+				document.getElementById("bfnameError").innerHTML = "First Name is requierd to get your Ticket(s)";
+				return false;
+			}
+					
+
+			if (bsname == "") {
+				document.getElementById("bsnameError").innerHTML = "Second Name is requierd to get your Ticket(s)";
+				return false;
+			}
+			
+			if (cname == ""){
+				document.getElementById("cnameError").innerHTML = "Company Name is requierd to get your Ticket(s)";
+				return false;
+			}
+			
+			if (role == ""){
+				document.getElementById("roleError").innerHTML = "Your role in the company is requierd to get your Ticket(s)";
+				return false;
+			}
+					
+			if (bemailadress == ""){
+				document.getElementById("bemailadressError").innerHTML = "Email Adress is requierd to get your Ticket(s)";
+				return false;
+			}
+			
+					
+			if (bnumber == ""){
+				document.getElementById("bnumberError").innerHTML = "Phone Number is requierd to get your Ticket(s)";
+				return false;
+			}
+					
+			if (bpassword == ""){
+				document.getElementById("bpasswordError").innerHTML = "Creating a password is requierd to get your Ticket(s)";
+				return false;
+			}
+			
+			
+					
+			//When the form is valid 
+			alert("You will recive your ticket(s) shortly");
+			return true;
+			
+			
+		}
+		
+		
+		/*function getSelectedRadioValueTwo(bnumbertickets){
+		
+			var radios = document.getElementsByName(bnumbertickets);
+			
+			for (var i = 0; i <radios.length; i++){
+			
+				if (radios[i].checked){
+				
+				 return radios[i].value;
+				}
+			}
+			
+			return"";
+			
+		} */
+		
+		
+
+		</script>
+		
 		
 		<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
 		
