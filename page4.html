@@ -1,0 +1,106 @@
+<!--Linru Wang-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<!--Copied and pasted from W3School metadata-->
+	<meta charset="UTF-8">
+	<meta name="description" content="Global Action event organizers and our roles.">
+	<meta name="keywords" content="HTML, CSS, JavaScript">
+	<meta name="author" content="Linru Wang">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="style.css">
+	<!--Connect to google fonts-->
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Lora:wght@700&family=Source+Sans+3:wght@500&display=swap" rel="stylesheet">
+	<!-- Going to use bootstrap container to maintain the page -->
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+	
+	<title>Global Action</title>
+	
+	
+</head>
+<body>
+	<!-- Going to use bootstrap container to maintain the page -->
+	<div class="container-fluid"> 
+		<div class="text-bg-dark p-3">
+			<ul class="nav justify-content-center"> 
+				<li class="nav-item">
+					<a class="nav-link active" href="index.html">Home</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link active" href="page2.html">Get Tickets</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link active" href="page3.html">Event Detials</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link active" href="page4.html">Our Team</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link active" href="page5.html">Coin Flip Game</a>
+				</li>
+					  
+			</ul>
+		</div> 
+	</div>
+	
+		<!--Code to create the columns -->
+		<div class="main">			
+			<div class="row1 text-center">  
+				<div class="col-sm-12">
+					<h1>Our team</h1>
+				</div>
+			</div>			
+			<div class="row">
+				<div class="col-sm-4">
+					<img class="profileImage" src="images/Damien.jpg" alt="Profile"/>
+					<h2>Damien Ho</h2>
+					<p>Director of Ireland's National Biodiversity Data Center</p>
+				</div>
+				<div class="col-sm-4">
+					<img class="profileImage" src="images/Bogdan.jpg" alt="Profile"/>
+					<h2>Bogdan Postolachi</h2>
+					<p>Administrator, UN Development Programme</p>
+				</div>
+				<div class="col-sm-4">
+					<img class="profileImage" src="images/Linru.jpg" alt="Profile"/>
+					<h2>Linru Wang</h2>
+					<p>CEO of the Beijing Future Innovation Center </p>
+				</div>
+			</div>
+			
+		</div>
+	    
+
+
+	
+	
+	
+	<div class="footer">
+		<div class="row text-center">
+			<div class="col-sm-6">
+				<!--Going to have button for each page which connected to tickets page and make them in the center of page-->
+				<a href = "page2.html" id="tickets"><button type="button" onclick="document.getElementById('tickets').innerHTML = Date()">Get your tickets</button></a>
+			</div>
+			<div class="col-sm-6">
+			<button onclick="myFunction()">Go Back</button>
+			</div>
+		</div>
+	</div>
+				
+			<!--Going to use Script tags-->
+			<!--use Javascript window history back-->
+			<script> 
+				function myFunction() {
+				window.history.back();
+				}
+			</script>
+			<!--Copied bootstrap-->
+			<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous">
+			</script>
+
+</body>
+
+</html>

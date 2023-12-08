@@ -5,10 +5,10 @@
 		<!--Bogdan Postolachi-->
 		
 		<meta charset="utf-8">
-		<meta name="viewport" content="width=device-width, initial-scale=1">
-		<meta name="description" content="page-2 Get Tickets">
-		<meta name="keywords" content="Sustainability, tickets, information, climate action, corporate accountability">
-		<meta name="author" content="Bogdan Postolachi">
+		<meta name="viewport" content="width=device-width, initial-scale=1"> <!--viewport scales the page to a specific device-->
+		<meta name="description" content="Get Tickets your event tickets now"> <!-- description displays the written description to users-->
+		<meta name="keywords" content="Sustainability, tickets, information, climate action, corporate accountability">  <!--keywords gives search engines more information about the page-->
+		<meta name="author" content="Bogdan Postolachi"> <!--this defines the author of the page-->
 		
 		<title>Global Action</title>
 		
@@ -237,6 +237,18 @@
 					</div>
 				
 				</div>
+				
+				
+				<div class = "footer">
+					<div class = "row text-center">
+						<div class = "col-sm-12">
+							<p id = "completed">Thanks for buying your ticket(s)</p>
+								
+									<input type="button" value="Bought tickets" onclick="textChange()"/>
+						
+						</div>
+					</div>
+				</div>
 			</div>
 		
 		</div>
@@ -421,6 +433,10 @@
 
 			
 			
+		}
+		
+		function textChange(){
+			document.getElementById("completed").innerHTML = "Have a nice day!!!";
 		}
 
 		</script>

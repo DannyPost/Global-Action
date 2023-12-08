@@ -1,3 +1,277 @@
+/*style.css This is where styling the website will be done in terms of background colour, Fonts, Font size as well as making the page responsive with media queires. Alot of the selectors are used to target those class or attributes specifically so that I could design them accordingly
+font-family: 'Lora', serif;
+font-family: 'Source Sans 3', sans-serif;
+
+CSS below is done by me: Damien Ho.
+*/
+
+body{
+	margin:0;/*Makes space around the element border*/
+
+}
+
+.container-fluid{/*Selecting the class attribute and style it for that specifically*/
+	width: 100%;
+	height: 100px;
+	margin: 0 auto; 
+}
+
+.nav-item{
+	font-size: 200%; /*I changed the size of the text*/
+}
+
+.text-bg-dark ul li a{
+	color: #fff;
+}
+
+
+.gallery:hover {/*I had an idea of being able to click on the image to go to the link of the image, I was able to get this information from: https://www.w3schools.com/css/css_image_gallery.asp*/
+	background: transparent;
+}
+
+.desc {
+ 
+  text-align: center;
+}
+
+
+.col-sm-12 h1{
+	background-color: #42c5f5;
+	font-family: 'Lora', serif;/* I used google fonts to help nme look for a specific style of font we want to use on our webpages*/
+	font-size: 400%;
+	margin: 10px;
+}
+
+.col-sm-12{
+	background-color: #42c5f5;
+	border: 3px solid;
+	padding: 10px;/*This is the space between the element border and the element content*/
+}
+
+.col-sm-6{
+	background-color: #42c5f5;
+	border: 3px solid;
+	padding: 10px;
+}
+
+.col-sm-4 h2{
+	color: #AAFF00;
+}
+
+
+.footer{
+	margin: 12px;
+}
+
+h2 b{
+	color: #AAFF00;
+	font-size: 120%;
+	text-decoration: underline;
+	text-decoration-color: #7CFC00;
+}
+
+.col-sm-8 p{
+	font-size: 160%;
+}
+
+.col-sm-5 h2{
+	color: #AAFF00;
+}
+
+
+.main{ /* I insert the image in this selector class as to have it display in the background of everything, I also made it that it is in a fixed position so when the webpage is being scrolled up and down, the image will always remain in the same position no matter what.*/
+	background-image:url("images/earth.jpg"); /* The Image credit goes to Pixabay, the link to the image https://www.pexels.com/photo/planet-earth-220201/ */
+	background-size:cover;
+	background-attachment: fixed; /* This makes the image in a fixed position on the website meaning it will stay the way it is when scrolling up and down the webpage*/
+	font-family: 'Source Sans 3', sans-serif;
+	margin: 0 auto;
+	border: 5px solid;
+}
+
+p{ 
+	background-color: #fff;
+	border-radius: 15px;
+	color: #00000;
+	margin: 5px;
+	padding: 10px;
+}
+
+
+img{ /*This is the image tag where I used the CSS to scale the size with max-width and max-height, I also used the border-radius to make it look appealing instead of just a picture box*/
+	border-radius: 20px;
+	margin: 30px;
+	border: 3px solid #AAFF00;
+	max-width: 400px;
+	max-height: 400px;
+
+}
+
+
+.responsive {
+  width: 100%;
+  height: auto;
+}
+.link{
+	text-align: block;
+	color: #33FFEF;
+}
+
+.planet{
+	width: 50px;
+	height: 50px;
+}
+button{
+	background: #AAFF00;
+	cursor: pointer;
+	text-align: center;
+	width: 180px;
+	padding: 20px;
+	font-weight: bold;
+	border: 3px solid #BEB068;
+}
+
+
+button:hover{ /* when I move my cursor to the button, it should highlight the color of the background-color */
+	background-color: #cc2b96;
+}
+
+button:active{ /*When you click the button it should display the color code which indicates that the button was activated*/
+	color: #2ecc71;
+	text-decoration: underline;
+}
+
+/* Styling the forms */
+
+form{
+	background-color: #ADD8E6;
+	border: 5px solid #fff;
+	border-radius: 20px;
+	padding: 100px;
+    max-width: 600px;
+    margin: 0 auto;
+}
+.text-center h2{
+	font-size: 300%;
+	color: #AAFF00;
+}
+label{
+	font-size: 150%;
+	color: #00000;
+    
+}
+
+input[type="text"],
+input[type="password"],
+input[type="radio"] { /* I target these 3 selctors so that they would have the same styling*/
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+}
+
+.error{
+    color: #ff0000;
+    font-size: 15px;
+}
+
+input[type="submit"],
+input[type="reset"]{
+    background-color: #42c5f5;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+	border-radius: 20px;
+    cursor: pointer;
+}
+
+input[type="submit"]:hover,
+input[type="reset"]:hover{
+    background-color: #007bb5;
+
+}
+
+input[type="submit"]:active,
+input[type="reset"]:active{
+	color: #2ecc71;
+}
+
+/*Media Queries is used so that the webpage is adjusted to the right scale for the following platforms: I revised this by reading the slides from : https://moodle2023.ncirl.ie/pluginfile.php/57749/mod_resource/content/1/WDD_wk4_responsive_media_exxampe.pdf*/
+/* Ipad Responsive*/
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+    .col-sm-12 h1 {
+        font-size: 300%; 
+    }
+
+    .col-sm-6,
+    .col-sm-8 {
+        padding: 9px; 
+    }
+
+    form {
+        padding: 20px; 
+    }
+}
+
+/* Laptop Responsive */
+@media screen and (min-width: 1224px) {
+    .col-sm-12 h1 {
+        font-size: 400%; 
+    }
+
+    .col-sm-6,
+    .col-sm-8 {
+        padding: 15px; 
+    }
+
+    form {
+        padding: 30px; 
+    }
+}
+
+/* Mobile phones Responsive: this should scale the page to the screen for the phones*/
+@media screen and (max-width: 480px) {
+    .col-sm-12 h1 {
+        font-size: 200%;
+    }
+
+    .col-sm-6,
+    .col-sm-8 {
+        padding: 5px; 
+    }
+
+    form {
+        padding: 10px; 
+    }
+}
+/* All the CSS above is done by: Damien Ho*/
+
+/*Linru Wang All CSS done by me*/
+
+/*Going to do border, use margin to create space around elements and have few background color in the borders*/
+h3{
+	margin:240px;
+	border: 1px solid #4CAF50;
+	background-color: lightgreen;
+}
+video{
+	border: 1px solid #4CAF50;
+}
+h4{
+	margin:500px;
+	border: 1px solid #4CAF50;
+	background-color: lightgreen;
+	
+}
+h5{
+	margin:240px;
+	border: 1px solid #4CAF50;
+	background-color: lightgreen;
+}
+
+
+
+
+/*Linru Wang All CSS done by me*/
+
 /*Bogdan Postolachi bellow*/
 
 .btn input{ /*this will target the input tag inside the btn div class*/

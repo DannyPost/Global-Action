@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+
+	<head><!--This is the most important heading as it will contain my meta tags, my link to my CSS, link to the google fonts I am using so that it may become active when I insert it on my CSS and as well as script tags -->
+	
+		<!-- Meta tags are used to tell what the web browser is about -->
+		<meta charset="utf-8">
+		<meta name="description" content="This page includes details of the Events on who you can expect to be there with relevant details to the businessess and has a Gallery of said events">
+		<meta name="keywords" content="Sustainability, Event Details, information, Responsive, Bootstrap, Gallery">
+		<meta name="author" content="Damien Ho">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		
+		<!-- Title tag is the webpage title to what I want to give it, in here I call it Global Action -->
+		<title>Global Action</title>
+		
+		
+		<!--I included Bootstrap for CSS and JS: https://getbootstrap.com/docs/5.3/getting-started/introduction/#quick-start -->
+		<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous"><!-- Link tag to Bootstrap to design my responsive page and a script tag -->
+		<link rel="stylesheet" href="style.css"> <!-- This is a link to the CSS so that I can style the website to what I want it to look like -->
+		
+		<!-- These are the links for the Google Fonts, if I don't have these then the style of my fonts won't work -->
+		<link rel="preconnect" href="https://fonts.googleapis.com">
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+		<link href="https://fonts.googleapis.com/css2?family=Lora:wght@700&family=Source+Sans+3:wght@500&display=swap" rel="stylesheet">		
+	</head>
+	
+	<body> <!-- my entire page of the website's content, this contains -->
+		
+		<div class="container-fluid"> <!-- I'm using bootstrap container to maintain my page in a stable format -->
+		
+			<div class="text-bg-dark p-3"><!-- I used bootstrap to style my Navagational bar for my page links to stand out -->
+			
+					<!-- This is my Nav bar list and when clicked it will go to that page you are looking for -->
+					<ul class="nav justify-content-center"> 
+					
+						
+						<li class="nav-item">
+							<a class="nav-link active" href="index.html">Home</a><!--This is an anchor tag that includes the link of the page so when you click the specific page you are looking for then it should bring you to that page -->
+						</li>
+						<li class="nav-item">
+							<a class="nav-link active" href="page2.html">Get Tickets</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link active" href="page3.html">Event Detials</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link active" href="page4.html">Our Team</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link active" href="page5.html">Coin Flip Game</a>
+						</li>
+						  
+					</ul>
+			</div>
+		
+			
+			<div class="main"><!-- I used many div tags as containers for most of the elements in the HTML page, it's important for me to use div tags as I can easily style it by using CSS by using the class or id attribute -->
+			
+				<div class="row1 text-center"><!-- this class centers my page -->
+					<!-- row 1 -->
+			
+					<div class="col-sm-12"><!-- Using the entire column just for the header name of the page -->
+						<h1>Event Details</h1><!-- This is my header tag, I used h1 so this is my main header of this page, as you use h2, h3 etc then the headers will become smaller -->
+	
+					</div>
+				</div>
+				
+				<br><br><br><!-- I used break tags here just to make space between the rows-->
+			
+				<div class="row"><!-- From my wireframe I'm including my 3 paragraphs by putting them into 3 different rows -->
+				
+					<!-- row 2 -->
+					<div class="col-sm-4"><!-- this is my column and has a specific number used for the columns as webpages has 12 columns, I indicated here I am using 4 columns -->
+						<img class="responsive" src="images/organic.jpg" alt="organic-food"> <!-- In the Image tags, it includes a filepath to where I have stored the images, I have also optimised the image as well as scaled it in the CSS -->
+						<div class="desc"><a class="link" href="https://www.advantageaustria.org/se/events/Nordic_Organic_Food_Fair_2022.en.html">Credit: ADVANTAGE AUSTRIA Stockholm</a></div>
+					</div>
+					
+					<div class="col-sm-8">
+						<h2><b>Organic Foods</b></h2><!-- the <b> tag I used in this heading makes the text in Bold letters-->
+						<p>Explore and engage in thought provoking discussions on the improtance of Organic Foods in terms of production and good health while contributing to a greener planet. Our summit provides a unique platform for networking with other professional leaders and entrepreneurs as you can elevate your understanding of the intersection between profitability and social responsibility, and gain insights that will drive positive change within your organization. Let us shape businessess that can thrive while being greener towards a sustainable future! </p><!--p tag is used to contain standard text I put in so in this case I wrote out the details of the event for this section about Organic foods -->
+					</div>
+					
+				</div>
+				<br>
+				<br>
+				<div class="row"><!--As I have some class that have the same name such as this one for example the name for this class is "row", it's vital I have some class with the same name because it will be easier for me to style it in the CSS -->
+				
+					<!-- row 3 -->
+					<div class="col-sm-4">
+						<img class="responsive" src="images/ford.jpg" alt="Ford-Motors">
+						<div class="desc"><a class="link" href="https://www.nbcnews.com/id/wbna44502861">Credit: Alex Domanski</a></div><!-- I included links to the original author/website taht owns the images, I did so for the other links as well -->
+					</div>
+					
+					<div class="col-sm-8">
+					
+						<h2><b>Ford Motors</b></h2>
+						<p>By advancing a culture of sustainability, Ford not only contributes to a cleaner and greener future but also sets a praiseworthy standard for the automotive vehicle industry. They stand proud of the commitment to being a sustainable business as they have implemented creative measures to reduce its ecological footprint by incorporating cutting-edge technologies for improving fuel efficiency and reduced emissions. If you love automobiles and promoting a greener planet then this summit is for you!</p>
+					
+					</div>
+					
+				</div>
+				
+				<br>
+				<br>
+				
+				<div class="row">
+				
+					<!-- row 4 -->
+					<div class="col-sm-4">
+						<img class="responsive" src="images/apple.jpg" alt="Apple 2023">
+						<div class="desc"><a class="link" href="https://www.apple.com/uk/newsroom/2023/06/wwdc23-highlights/">Credit: Apple</a></div>
+					</div>
+					
+					<div class="col-sm-8">
+						<h2><b>Apple</b></h2>
+						<p>Apple stands today as one of the biggest leading technological company and brand in the world. They are well known for their cutting-Edge technology but did you know they are also a global icon that stands for it's unwavering commitment to promoting sustainability. Apple has made significant strides in reducing its carbon footprint by transitioning to renewable energy sources for its facilities and manufacturing processes. These evidence points to products with focus on recycled materials and minimizing environmental impact. They demonstarte that profitability and sustainability can coexist.</p>
+					</div>
+					
+				</div>
+				
+			<div class="row text-center">
+			
+				<h2><b>Gallery</b></h2>
+			
+			</div>
+			
+			<div class="row">
+			
+				<div class="col-sm-4">
+					
+					<!--I got this idea from https://www.w3schools.com/css/css_image_gallery.asp, I am able make the image that you can click on it to go to the link -->
+					<div class="gallery"><!-- I am able make the image that you can click on it to go to the link -->
+					  <a target="_blank" href="https://www.ecocaters.com/wp-content/uploads/2017/11/Terra-Madre-Gardens-San-Diego-catering-San-diego-Eco-Caters-best-catering-San-Diego-wedding-catering-organic-11-of-21.jpg">
+						<img class="responsive" src="images/food.jpg" alt="Catering">
+					  </a>
+					</div>
+					
+				</div>
+				
+				<div class="col-sm-4">
+				
+					<div class="gallery">
+					  <a target="_blank" href="https://www.apple.com/newsroom/images/live-action/wwdc-2023/standard/consumer-wrap-up/Apple-WWDC23-event-photos-Apple-Design-Award-winners_big.jpg.large.jpg">
+						<img class="responsive" src="images/team.jpg" alt="Catering">
+					  </a>
+					</div>
+					
+				</div>
+				
+				<div class="col-sm-4">
+				
+					<div class="gallery">
+					  <a target="_blank" href="https://www.ford.co.uk/content/dam/guxeu/uk/experience-ford/motor-shows/explorer-dealer-tour/ford_motorshows-uk-explorer_dealer_tour-16x6-2160x1215-new-explorer-driving.jpg.renditions.small.jpeg">
+						<img class="responsive" src="images/car.jpg" alt="Catering">
+					  </a>
+					</div>
+					
+				</div>
+			</div>
+			
+			<div class="row">
+				
+				<div class="col-sm-4"><!-- I used this as empty columns to take some space on the page as I want to center my image -->
+				</div>
+
+				<div class="col-sm-8">
+					
+					<div class="gallery">
+					  <a target="_blank" href="https://www.ford.co.uk/content/dam/guxeu/rhd/central/brochureware/experience-ford/motor-shows/ford-eu-Motor_shows_events_Go_Further_1-3x1-2160x925-bb.jpg.renditions.extra-large.jpeg">
+						<img class="responsive" src="images/show.jpg" alt="Catering">
+					  </a>
+					</div>
+					
+				</div>
+			</div>
+				
+				
+			</div>
+			
+			
+			<div class="footer">
+				<div class="row text-center"><!-- Using this to center my button content at the bottom of the page -->
+					
+					<div class="col-sm-6">
+						<!--Bogdan Postolahi provided the footer link to the Get Tickets page -->
+						<a href = "page2.html" id="tickets"><button type="button" onclick="document.getElementById('tickets').innerHTML = Date()">Get your tickets</button></a><!-- This is a click button that has an anchor tag that has a link to go to the "Get Tickets" page-->
+					</div>
+						
+					<div class="col-sm-6">
+						 
+						 <!--Code from computing Support: Paste the code used from class-->
+						<label>Enter Your name: </label>	
+						<br>
+						<input id="name">
+						<br>	
+						<button onclick="greet()">Click me!</button>
+						<p id="message"></p>
+			
+					</div>
+						
+				</div>
+			</div>
+		
+		</div>
+		
+		<!-- I used JavaScript to manipulate the Document Object Model to this HTML which is displayed on the wbepage-->
+		<script> function greet(){ var name = document.getElementById("name").value; document.getElementById("message").innerHTML = "Hello there "+ name +" and welcome to the future of sustainability!";}</script><!--I used this code from computing support, this is a script to call from the variables, this is for manipuloation of the DOM --> 
+		<script>document.getElementsByTagName("h1")[0].style.color = " #AAFF00";</script>
+		
+		<!--Bootstrap Script -->
+		<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+	
+	</body>
+	
+</html>

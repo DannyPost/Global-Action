@@ -100,6 +100,8 @@
 			
 			//w3schools used to further explore addEventListener: https://www.w3schools.com/js/js_htmldom_eventlistener.asp#:~:text=The%20addEventListener()%20method%20attaches%20an%20event%20handler%20to%20an,i.e%20two%20%22click%22%20events.
 			
+			
+			//.addEventListener method attaches handler to element without overwritting it 
 			document.getElementById("gameButton").addEventListener("click" , function(){
 			
 			
@@ -108,6 +110,7 @@
 											myButton.addEventListener('click', () => {
                                     	console.log('Button clicked!');
                                       });*/
+									  
 				const gameButton = document.getElementById('gameButton');
 					//gameButton.addEventListener('click', () => {
 					gameButton.innerHTML = 'Game In Process!';
@@ -118,7 +121,7 @@
 				
 				while (playAgain) {
 			  
-					let flipChoices= ["heads" , "tails"];
+					let flipChoices= ["heads" , "tails"]; //let used to declare variable flipChoices
 					
 					function randomFlip(){
 				
