@@ -266,16 +266,13 @@
 				//"fname" accesses "fname" from the form
 				
 				//for second name 
-				var sname = document.forms["attendeeForm"]["sname"].value; // forms property used like an array 
-				
-				//for number of tickets
-				//var numbertickets = getSelectedRadioValue("number"); //the function retrives the value from the group "number"
+				var sname = document.forms["attendeeForm"]["sname"].value; // ["attendeeForm"] accesses the form element document with the name attendeeForm
 				
 				//for email adress
-				var emailadress = document.forms["attendeeForm"]["emailadress"].value; //.value retrives the value the user entered 
+				var emailadress = document.forms["attendeeForm"]["emailadress"].value; //["emailadress"] retrives the spcific input with the matching id
 				
 				//for phone number
-				var number = document.forms["attendeeForm"]["number"].value; 
+				var number = document.forms["attendeeForm"]["number"].value; //.value retrives the value the user entered 
 			
 				//for password
 				var password = document.forms["attendeeForm"]["password"].value; 
