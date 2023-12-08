@@ -1,0 +1,18 @@
+/*Bogdan Postolachi bellow*/
+
+.btn input{ /*this will target the input tag inside the btn div class*/
+	background: #AAFF00; /*this will change the background colour of the button*/
+	cursor: pointer; /* changes the cursor whenever the user hovers over the button*/
+	text-align: center; /*alligns the text inside the button to the center*/
+	width: 180px; /*width of the button*/
+	padding: 20px; /* space between the border and the content*/
+	font-weight: bold; /* makes font bold*/ 
+	border: 3px solid #BEB068; 
+}
+
+.col-sm-12 p{
+	background-color: #42c5f5;
+	font-family: 'Lora', serif; /*changes the default font to the selected one*/
+	font-size: 420%;
+	margin: 10px; /*space around the border*/
+}
